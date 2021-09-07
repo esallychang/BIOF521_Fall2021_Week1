@@ -20,6 +20,7 @@
 [jekyll]: https://jekyllrb.com/
 [jupyter]: https://jupyter.org/
 [kramdown]: https://kramdown.gettalong.org/
+[ku-gsc]: https://gsc.ku.edu/
 [lc-lessons]: https://librarycarpentry.org/lessons/
 [lesson-aio]: {{ relative_root_path }}{% link aio.md %}
 [lesson-coc]: {{ relative_root_path }}{% link CODE_OF_CONDUCT.md %}
