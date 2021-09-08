@@ -5399,6 +5399,20 @@ button.list-group-item {
   width: 100%;
   text-align: left;
 }
+
+.btn-outline-tool {
+  color: #2F4F4F;
+  background-color: #ffffff;
+  border-color: #2F4F4F;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.btn-outline-tool::before{
+   content: "\e136";
+   font-family: 'Glyphicons Halflings';
+}
+
 .list-group-item-success {
   color: #3c763d;
   background-color: #dff0d8;
