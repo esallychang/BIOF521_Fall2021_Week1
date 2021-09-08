@@ -131,25 +131,25 @@ The excerpt from the paper below includes information on how to locate the seque
 > version of the paper. Correspondence and requests for materials should be
 > addressed to R.E.L. (lenski *at* msu.edu)
 
-his lesson uses a *subset* of SRA files, from a small *subproject* of the BioProject database 
+**This lesson uses a *subset* of SRA files, from a small *subproject* of the BioProject database 
 "PRJNA294072". To find these data you can follow the instructions below:** 
 
 1. Notice that the paper references "PRJNA294072" as a "BioProject" at NCBI. If you go to the [NCBI website](https://www.ncbi.nlm.nih.gov/) and search for "PRJNA294072" you will be shown a link to the "Long-Term Evolution Experiment with E. coli" BioProject. Here is the link to that database: [https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA294072](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA294072). 
 
 2. Once on the BioProject page, scroll down to the table under **"This project encompasses the 
-following 13 sub-projects:"**. 
+following 14 sub-projects:"**. 
 
 3. In this table, select **subproject** 
 *"[PRJNA295606](https://www.ncbi.nlm.nih.gov/bioproject/295606)	SRA or Trace	Escherichia coli B str. REL606	E. coli genome evolution over 50,000 generations (The University of Texas at...)"*. 
 
 4. This will take you to a page with the subproject description, and a table **"Project Data"** 
-that has a link to the 224 SRA files for this subproject. 
+that has a link to the 224 SRA files for this subproject. **Note that this is an ongoing project so the number of sub-projects and available SRA files might be changed since the writing of this lesson**.  
 
 5. Click on the number 
 ["224"](https://www.ncbi.nlm.nih.gov/sra?linkname=bioproject_sra_all&from_uid=295606) next to "SRA Experiments" and it will take you to the SRA page for this subproject. 
 ![03_send_results.png](../fig/03_ncbi_send_results.png)
 
-6. For a more organized table, select "Send results to Run selector". This 
+6. **Recommended**: For a more organized table, select "Send results to Run selector". This 
 takes you to the Run Selector page for BioProject PRJNA295606 (the BioProject number for the experiment SRP064605) that is used in the next section. The run selector is being updated, at this point you can either use the redesigned SRA Run Selector (recommended) or revert to the old Run Selector.
 
 
@@ -166,7 +166,7 @@ takes you to the Run Selector page for BioProject PRJNA295606 (the BioProject nu
 4. This will take you to a page that is a run browser. Take a few minutes to examine some of the descriptions on the page.
 ![ncbi-run-browser.png](../fig/03_ncbi_new_run_browser.png)
 
-5. Use the browser’s back button to go back to the 'previous page'. As shown in the figure below, the second section of the page (“Select”) has the **Total** row showing you the current number of “Runs”, “Bytes”, and “Bases” in the dataset to date. On 2020-04-27 there were 312 runs, 109.58 Gb data, and 177.17 Gbases of data. 
+5. **Use the browser’s back button to go back to the 'previous page'**. As shown in the figure below, the second section of the page (“Select”) has the **Total** row showing you the current number of “Runs”, “Bytes”, and “Bases” in the dataset to date. As of 2021-09-08 there were 312 runs, 109.58 Gb data, and 177.17 Gbases of data. 
 ![ncbi-new-metadata.png](../fig/03_ncbi_new_metadata.png)
 
 6. Click on the “Metadata” button to download the data for this lesson. The filename is “SraRunTable.txt” and save it on your computer Desktop.
@@ -187,8 +187,19 @@ Using your choice of spreadsheet program, open the `SraRunTable.txt` file. If pr
 
 Now you know that comma-separated and tab-separated files are both "text" files but use either commas or tabs as **delimiters**, respectively. They both are sometimes suffixed with `.txt`. 
 
-> ## Discussion  
-> Discuss with the person next to you:
+> ## Opening a `.csv` file in Excel
+> Your version of Excel may not properly open this `.csv` file without some intervention. You may need to do the following if Excel does not does not properly separate the columns:
+> 1. Open Excel and go to `File >> Open` and find where you downloaded `SraRunTable.txt`. 
+> 2. The window that opens should indicate that the Text Import Wizard has determined the data is delimited. If so, leave everything as-is and click **Next**.
+> 3. In `Text Import Wizard - Step 2 or 3` make sure that `Comma` instead of anything else. The window should look pretty much just like the following. 
+> 
+> ![text_import_wizard2.png](../fig/text_import_wizard2.png)
+> 4. Click through the next window without changing everything. Each variable should now be in its own column (much easier to read!). You may need to use this trick to examine files in future lessons. 
+{: .callout}
+
+Once your CSV file is open in your spreadsheet program of choice, try to answer the following about your data: 
+
+> ## Examining the SRA Run Table 
 >
 > 1. What strain of *E. coli* was used in this experiment?
 > 2. What was the sequencing platform used for this experiment?
@@ -197,18 +208,18 @@ Now you know that comma-separated and tab-separated files are both "text" files 
 > sequencing data?
 > 4. What other kind of data is available?
 > 5. Why are you collecting this kind of information about your sequencing runs?
->
+> 6. What SRA Run number should we use to download sequencing data for Sample `REL768B`? 
 > > ## Solution
 > > 1. Escherichia coli B str. REL606 shown under the "organism" column. This is a tricky question because the column labeled "strain" actually has sample names
 > > 2. The Illumina sequencing platform was used shown in the column "Platform". But notice they used multiple instrument types listed under "Instrument"
 > > 3. Sort by LibraryLayout and the column "DATASTORE_filetype" shows that "minhash_sig realign ref_stats sra wgmlst_sig" were used for all single-end reads. (Also notice the Illumina Genome Analyzer IIx was never used for paired-end sequencing)
 > > 4. There are several columns including: megabases of sequence per sample, Assay type, BioSample Model, and more.
 > > 5. These are examples of "metadata" that you should collect for sequencing projects that are sent to public databases. 
-> >
+> > 6. Find `REL768B` in the **Sample Name** column. That should correspond to Run `SRR2584409`. Keep a note of this for the next step!
 > {: .solution}
 {: .challenge}
 
-After answering the questions, you should avoid saving any changes you might have made to this file. We do not want to make any changes. If you were to save this file, make sure you save it as a plain `.txt` file.
+After answering the questions, you should avoid saving any changes you might have made to this file. We do not want to make any changes. If you were to save this file, make sure you save it as a plain `.txt` file. 
 
 ## Where to learn more
 
