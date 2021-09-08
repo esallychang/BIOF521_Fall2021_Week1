@@ -99,4 +99,37 @@ When the data come back from the sequencing facility, you will receive some docu
 > {: .solution}
 {: .challenge}
 
+## Examining Data on the NCBI SRA Database
+
+In our experiments we usually think about generating our own sequencing data. However, almost all analyses use reference data, and you may want to use it to compare your results or annotate your data with publicly available data. You may also want to do a full project or set of analyses using publicly available data. This data is a great, and essential, resource for genomic data analysis.
+
+When you come to publish a paper including your sequencing data, most journals and funders require that you place your data on a public repository. Sharing your data makes it more likely that your work will be re-used and cited. It helps to prepare for this early!
+
+There are many repositories for public data. Some model organisms or fields have specific databases, and there are ones for particular types of data. Two of the most comprehensive public repositories are provided by the [National Center for Biotechnology Information  (NCBI)](https://www.ncbi.nlm.nih.gov) and the [European Nucleotide Archive (EMBL-EBI)](https://www.ebi.ac.uk/). The NCBI's [Sequence Read Archive (SRA)](https://trace.ncbi.nlm.nih.gov/Traces/sra/) is the database we will be using for this lesson, but the EMBL-EBI's Nucleic Acid Archive (ENA) is also useful. The general processes are similar for any database.
+
+# Accessing the original archived data
+
+The [sequencing dataset (from Tenaillon, *et al.* 2016) adapted for this lesson](http://www.datacarpentry.org/organization-genomics/data/) was obtained from the [NCBI Sequence Read Archive](http://www.ncbi.nlm.nih.gov/sra), which is a large (~27 petabasepairs/2.7 x 10^16 basepairs as of April 2019) repository for next-generation sequence data. Like many NCBI databases, it is complex and mastering its use is greater than the scope of this lesson. Very often there will be a direct link (perhaps in the supplemental information) to where the SRA dataset can be found. We are only using a small part of these data, so a direct link cannot be found. If you have time, go through the following detailed description of finding the data we are using today (otherwise skip to the next section). 
+
+## Locate the Run Selector Table for the Lenski Dataset on the SRA
+
+See the figures below for how information about data access is provided within the original paper. 
+
+<img style='border:1px solid #000000' src="../fig/03_paper_header.png" alt="Screenshot of header from Tenaillon et al. paper (linked in References)" width="800"/>
+
+The **above image** shows the title of the study, as well as the authors.
+
+The excerpt from the paper below includes information on how to locate the sequence data. In this case, the text appears just before the reference section.
+
+> **Author Information** All sequencing data sets are available in the NCBI
+> BioProject database under accession number PRJNA294072. The *breseq*
+> analysis pipeline is available at GitHub ([http://github.com/barricklab/breseq](https://github.com/barricklab/breseq/)).
+> Other analysis scripts are available at the Dryad Digital Repository ([http://dx.doi.org/10.5061/dryad.6226d](https://doi.org/10.5061/dryad.6226d)). R.E.L. will make strains available to qualified
+> recipients, subject to a material transfer agreement. Repreints and permissions
+> information is available at www.nature.com/reprints. The authors declare no
+> competing financial interests. Readers are welcome to comment on the online
+> version of the paper. Correspondence and requests for materials should be
+> addressed to R.E.L. (lenski *at* msu.edu)
+
+
 {% include links.md %}
