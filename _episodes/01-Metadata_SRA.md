@@ -215,7 +215,7 @@ Once your CSV file is open in your spreadsheet program of choice, try to answer 
 > > 3. Sort by LibraryLayout and the column "DATASTORE_filetype" shows that "minhash_sig realign ref_stats sra wgmlst_sig" were used for all single-end reads. (Also notice the Illumina Genome Analyzer IIx was never used for paired-end sequencing)
 > > 4. There are several columns including: megabases of sequence per sample, Assay type, BioSample Model, and more.
 > > 5. These are examples of "metadata" that you should collect for sequencing projects that are sent to public databases. 
-> > 6. Find `REL768B` in the **Sample Name** column. That should correspond to Run `SRR2584409`. Keep a note of this for the next step!
+> > 6. Find `REL769A` in the **Sample Name** column. That should correspond to Run `SRR2584549`. Keep a note of this for the next step!
 > {: .solution}
 {: .challenge}
 
